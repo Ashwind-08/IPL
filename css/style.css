@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/*************************/
+/***** COMMON ************/
+/*************************/
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*************************/
+/***** HEADER ************/
+/*************************/
+
+#heading-container,
+#head-left {
+  display: flex;
+}
+#heading-container {
+  margin-top: -50px;
+  width: 100%;
+  box-shadow: 2px 4px 2px rgb(17 16 16 / 50%);
+  position: fixed;
+  height: 70px;
+  background-color: #fff;
+}
+#head-con2 {
+  margin-top: -100px;
+  width: 100%;
+  box-shadow: 2px 4px 2px rgb(17 16 16 / 50%);
+  position: fixed;
+  height: 70px;
+  background-color: #dddddd;
+}
+
+#head-con3 {
+  margin-top: -70px;
+  width: 100%;
+  box-shadow: 2px 4px 2px rgb(17 16 16 / 50%);
+  position: fixed;
+  height: 70px;
+  align-items: center; 
+  background-color: #dddddd;
+}
+#heading-right {
+  display: flex;
+  width: 55%;
+  
+}
+#head-left {
+  width: 45%;
+  margin: 0 20px;
+}
+#logo {
+  width: 120px;
+  background-color: #efefef;
+  margin-left: 20px;
+}
+#home-btn {
+  margin-top: 10px;
+  width: 10%;
+  height: 50px;
+  width: 100px;
+  background-color: #3783d0;
+  --red-white-mix: color.mix(red, white);
+  border: 0px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding-left: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 30px;
+}
+#home-button:hover {
+  box-shadow: 1px 1px 5px #5243c0, -0.1px -0.1px 10px rgb(165, 161, 161);
+  cursor: pointer;
+}
+.add-button {
+  cursor: pointer;
+  background-color: #205375;
+  border: 0px;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 30px;
+  color: #ffffff;
+  padding: 1px 30px;
+  margin: 10px;
+}
+.add-button:hover {
+  box-shadow: 0px 0px 5px #5243c0, -0.1px -0.1px 10px rgb(165, 161, 161);
+  cursor: pointer;
+}
+
+.search-input {
+  margin-top: 10px;
+  margin-right: 10px;
+  background: #dad3d3;
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+  height: 48px;
+  box-shadow: 01px 2px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.search-input input {
+  height: 48px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.search-input.active input {
+  border-radius: 30px ;
+}
+::placeholder {
+  color: #DDDDDD;
+}
+.search-input .autocom-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+}
+.search-input.active .autocom-box {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autocom-box li {
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search-input.active .autocom-box li {
+  display: block;
+  background-color: white;
+  box-shadow: 1px 1px 2px gray;
+}
+.autocom-box li:hover {
+  background: #efefef;
+}
+.search-input .icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #d82fb7;
+  cursor: pointer;
+}
+/*************************/
+  /***** MAIN ************/
+  /*************************/
+  
+  /* image slider start here */
+
+main{
+  max-width: 1200px;
+  margin:  0 auto;
+  background-color: #F6F6F6;
+ }
+ 
+  .slider {
+  margin-top: 50px !important;
+  padding-top: 20px;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 0.5s;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slide img {
+  width: 100%;
+  margin-top: 0px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  left: 10px;
+  margin-top: 2.7vw;
+  /* background-color: black; */
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid rgb(89, 87, 87);
+  /* margin-top: 32.4vw; */
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.1;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: gray;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  left: 10px;
+  justify-content: center;
+  margin-top: 32.4vw;
+}
+
+.navigation-auto div {
+  border: 2px solid gray;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.5s;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: gray;
+  color: blue;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: gray;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: gray;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: gray;
+}
+.slides input {
+  height: 20px;
+  width: 20px;
+}
+.navigation-auto div {
+  height: -2px;
+}
+
+/* image slider end here */
+
+/* card grid goes here */
+#slogan {
+  justify-content: center;
+  display: flex;
+  margin-top: 80px;
+  padding: 20px 0;
+  font-size: 50px;
+  background-color:#ECF2FF;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  width: 100%;
+ cursor: pointer;
+}
+#first-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110%;
+  margin-top: 50px;
+  max-width: 1200px;
+}
+#container_teams {
+  display: flex;
+  margin-right: 50px;
+  flex-wrap: wrap;
+  width: 110%;
+  justify-content: center;
+}
+
+.minibox {
+  width: 20.2%;
+  margin: 40px 13px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 10px 0px;
+  border-radius: 5px;
+}
+
+.mainimage {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  width: 90%;
+}
+.minibox:hover {
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 2px 10px 5px;
+  margin-top: 3px !important;
+  transition: 0.2s ease-in-out;
+}
+#teamname {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ff3cac;
+  background-image: linear-gradient( 10deg, #1A5F7A 0%, #2d6db7 70%,#146C94 40%);
+  padding: 25px 0;
+  margin: 8px 50px;
+  z-index: auto;
+  width: 100%;
+  border-radius: 0px 0 5px 5px;
+}
+
+/*************************/
+/***** Players Details ************/
+/*************************/
+
+#team-topPlayers {
+  justify-content: center;
+  display: flex;
+  margin-top: 70px;
+  padding: 20px 0;
+  width: 100%;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+
+
+
+.player-detail {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 0px 20px;
+  background-color: #F6F1F1;
+  background-image: linear-gradient(360deg, rgb(0, 29, 72) 20%, #B0DAFF 100%);
+
+}
+#playerinfo {
+  width: 65%;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+}
+#achivement  {
+  margin: 5px 0px 0 70px;
+}
+
+.player-detail td {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #BAD7E9;
+  /* background-image: linear-gradient(360deg, #40c8ed 20%, #B0DAFF 100%); */
+  color:#2a1d73;
+  border: 1px solid rgb(136, 133, 133);
+  width: 25vw;
+  padding-left: 10vw;
+  margin-left: 10px;
+ 
+}
+
+
+#playerimg img {
+  width: 35%;
+  margin: 0px 0 -10px 0;
+  margin-left: 19vw;
+}
+#player-details-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*************************/
+/***** Add team btn ************/
+/*************************/
+#addtoTeam {
+  justify-content: center;
+  display: flex;
+  margin-top: -30px;
+  padding: 20px 0;
+  width: 100%;
+  color: #C0DBEA;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-size: 50px;
+  background-color: #5ea51c;
+  background-image: linear-gradient(360deg, #009FBD 0%, #de354f 100%);
+  cursor: pointer;
+}
+#add-team {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+#addteamform {
+  color:white;
+  background-color: #8bc6ec;
+  /* background-image: linear-gradient(rgb(181 149 38) 0%, rgb(0, 29, 72) 100%); */
+  border-radius: 20px;
+  margin: 10px 0;
+  width: 60%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 60px 0;
+}
+#addteamform p{
+  font-size: 24px;
+  padding: 20px 0 10px 0;
+  font-weight: 500;
+  color: white;
+}
+
+
+#addteamform input {
+  width: 70%;
+  padding: 10px;
+  height: 40px;
+}
+#addteamform select {
+  width: 70%;
+  height: 40px;
+}
+
+#addteamform button {
+  display: block;
+  font-size: 16px;
+  margin-top: 50px;
+  font-weight: 600;
+  color: #fff;
+  padding: 16px 30px;
+  letter-spacing: 2px;
+  background-color: #a1af50;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#addteamform button:hover {
+  box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+}
+
+
+
+/*************************/
+/***** Team Details ************/
+/*************************/
+#Team {
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  padding: 20px 0;
+  width: 100%;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-size: 50px;
+  cursor: pointer;
+  color: #C0DBEA;
+  background-color: #2d6db7;
+
+}
+#table-team {
+  width: 100%;
+  margin-top: 50px;
+}
+#table-team table {
+  margin-right: 50px;
+  margin-bottom: 10px;
+  /* border-radius: 10px; */
+  padding: 20px;
+  background-color: #3ac5a2;
+  background-image: linear-gradient(360deg,#D864A9  60%,  #FCC8D1 100%);
+}
+#table-team table {
+  margin-left: 20vw;
+  
+}
+#table-team tr {
+  margin-top: 0;
+
+}
+#table-team td {
+  width: 60%;
+  border-bottom: 1px solid rgb(4, 3, 5);
+  border-left: 1px solid rgb(22, 16, 27);
+  width: 30vw;
+  font-size: larger;
+  padding-left: 10vw;
+}
+#table-team tr td:last-child{
+  border-right: 1px solid rgb(22, 16, 27);
+}
+#first{
+  border-top: 1px solid rgb(22, 16, 27);
+}
+.team-page-icon {
+  width: 100px;
+}
+#table-team td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* border-radius: 5px; */
+}
+
+#head-con4 {
+  margin-top: -70px;
+  width: 100%;
+  box-shadow: 2px 4px 2px rgb(17 16 16 / 50%);
+  position: fixed;
+  height: 70px;
+  background-color: #dddddd;
+}
+
+.mn2 {
+  background-image: linear-gradient(360deg, rgb(0, 29, 72) 20%, #e983af 100%);
+}
+#container_teams{
+  margin-left: 200px;
+}
+
+
+
+
+
+
+/**************************/
+/********** Footer ********/
+/**************************/
+footer {
+  color: white;
+  background-color: black;
+  text-align: center;
+
+  padding: 50px;
+}

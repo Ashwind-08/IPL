@@ -1,0 +1,22 @@
+#logo {
+    width: 120px;
+    background-color: #efefef;
+    margin-left: 20px;
+  }
+#home-btn {
+    margin-top: 10px;
+    width: 10%;
+    height: 50px;
+    width: 100px;
+    background-color: #3783d0;
+    --red-white-mix: color.mix(red, white);
+    border: 0px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 30px;
+  }

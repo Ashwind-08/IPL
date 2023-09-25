@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPL Cricket Teams Project</title>
+  <!-- Linking style.css stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Linking Google fontawesome link -->
+  <script src="https://kit.fontawesome.com/6f5013579e.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto&family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+
+  <!-- linking jquery official link -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+  <!-- Header Section start -->
+  <header>
+    <div id="heading-container">
+      <div id="heading-right">
+        <img src="https://static.india.com/wp-content/uploads/2020/08/IPL-Logo.jpg" alt="logo here" id="logo" />
+        <a href="index.html">
+          <button id="home-btn" class="add-button">Home</button></a>
+      </div>
+      <!-- Header Left -->
+      <div id="head-left">
+        <div class="search-input">
+          <a href="" target="_blank" hidden></a>
+          <input type="text" placeholder="Enter team code...eg - MI" />
+          <div class="autocom-box"></div>
+          <div class="icon"><i class="fas fa-search"></i></div>
+        </div>
+        <button id="add-team-button" class="add-button" onclick="addteamclicked()">
+          Add Team
+        </button>
+        <button id="add-player-button" class="add-button" onclick="addPlayerClicked()">
+          Add Player
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Header Section end -->
+
+
+  <main>
+    <section class="section1">
+
+    
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+
+        <div class="slide">
+          <img src="./images/sliderImages/img1.jpg" alt="" />
+        </div>
+        <div class="slide first">
+          <img src="./images/sliderImages/img2.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./images/sliderImages/img2a.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./images/sliderImages/img3.jpg" alt="" />
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+  </section>
+
+    <h1 id="slogan">2023  IPL TEAM</h1>
+    <div id="first-main">
+      <div id="container_teams">
+        <!-- Teams Grids and Information -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div>
+      <h4>@ IPL Cricket Teams - 2023</h4>
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
